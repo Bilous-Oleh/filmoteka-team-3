@@ -1,0 +1,81 @@
+<!-- Именование класов по бем, пример структуры с классами:  -->
+
+<header class="header header--fixed">
+  <div class="container header__container">
+    <div class="components">
+      <form class="search-form">
+        <label>
+          <input
+            class="search-form__input"
+            type="text"
+            name="searchQuery"
+            placeholder="Movie search"
+            autocomplete="off"
+            aria-label="Input to search for a movie by keyword"
+          />
+        </label>
+        <button class="search-form__button" type="submit" aria-label="Search">
+          <svg class="search-form__icon">
+            <use href="./icons/icons-sprite.svg#icon-search-2"></use>
+          </svg>
+        </button>
+      </form>
+      <div class="error-message"></div>
+      <ul class="movie-droplist"></ul>
+
+      <div class="navigation__container">
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a
+                class="navigation__link navigation__link--home current"
+                href="/src/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a
+                class="navigation__link navigation__link--my-library"
+                href="/src/my-library.html"
+                >My Library</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="toolbar">
+        <input
+          type="checkbox"
+          class="checkbox hidden"
+          id="checkbox"
+          aria-label="Change page color theme"
+        />
+        <label for="checkbox" class="checkbox-label">
+          <svg class="icon-sun" width="32" height="32">
+            <use href="./icons/dark-theme.svg#icon-sun"></use>
+          </svg>
+          <svg class="icon-moon" width="32" height="32">
+            <use href="./icons/dark-theme.svg#icon-moon"></use>
+          </svg>
+          <span class="ball"></span>
+        </label>
+
+        <button class="btn__authorization active" aria-label="Autorization">
+          <svg class="icon-user" width="32" height="32">
+            <use href="./icons/icons-sprite.svg#icon-user"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="logo">
+      <a href="/src/index.html" class="logo__library-link">
+        <svg class="logo__icon" width="32" height="32">
+          <use href="./icons/icons-sprite.svg#icon-film"></use>
+        </svg>
+        <span class="logo__text">Filmoteka</span>
+      </a>
+    </div>
+  </div>
+</header>

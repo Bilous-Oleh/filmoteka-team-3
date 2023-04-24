@@ -1,0 +1,35 @@
+.swiper-section {
+  display: none;
+  padding-top: 32px;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.swiper-title {
+  text-align: center;
+  margin-bottom: 32px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.swiper-slide {
+  border-radius: 10px;
+
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(0.9);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 2px rgb(195, 0, 0);
+  }
+}

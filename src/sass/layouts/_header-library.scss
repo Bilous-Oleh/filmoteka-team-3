@@ -1,0 +1,108 @@
+.header__container-library {
+  position: relative;
+}
+
+.navigation__library-container {
+  @include tablet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 105px;
+    justify-content: space-between;
+  }
+  @include desktop {
+    margin-bottom: 151px;
+  }
+}
+.navigation__library {
+  padding-top: 14px;
+  margin-bottom: 300px;
+  @include tablet {
+    padding-top: 16px;
+    margin-bottom: 0;
+  }
+}
+
+.navigation__list-library {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.library-btn__container {
+  position: absolute;
+  top: 100%;
+  left: 1%;
+  @include tablet {
+    position: static;
+    padding-top: 16px;
+  }
+  @include desktop {
+  }
+}
+.library__button-list {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  @include tablet {
+    gap: 8px;
+  }
+}
+
+.btn__library-watch {
+  width: 75px;
+  height: 34px;
+  background-color: #ffffff;
+  color: #b92f2c;
+  border-radius: 100px;
+  border: transparent;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  transition: all 1s cubic-bezier(0, -0.15, 0.22, 1);
+  cursor: pointer;
+  @include tablet {
+    width: 102px;
+    height: 38px;
+  }
+  @include desktop {
+    width: 120px;
+    height: 42px;
+  }
+}
+
+.btn__library-queue {
+  width: 68px;
+  height: 34px;
+  background-color: #ffffff;
+  color: #b92f2c;
+  border-radius: 100px;
+  border: transparent;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  transition: all 1s cubic-bezier(0, -0.15, 0.22, 1);
+  cursor: pointer;
+  @include tablet {
+    width: 86px;
+    height: 38px;
+  }
+  @include desktop {
+    height: 42px;
+  }
+}
+
+.icon-user {
+  stroke: #b92f2c;
+  fill: #ffffff;
+}
+
+.logo__library {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  @include tablet {
+    justify-content: start;
+  }
+}

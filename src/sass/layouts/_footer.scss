@@ -1,0 +1,153 @@
+.footer {
+  background: #f7f7f7;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  padding-left: 42px;
+  padding-right: 42px;
+  margin: 0 auto;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.footer__text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #545454;
+  min-width: 320px;
+  flex-direction: column;
+
+  .footer.dark & {
+    color: var(--base-white);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #545454;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.footer__text-by {
+  padding-right: 4px;
+  padding-left: 10px;
+}
+
+.footer__text-dev {
+  padding-right: 10px;
+  padding-left: 4px;
+}
+
+.footer__students-link {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    // transform: scale(1.2);
+    color: #b92f2c;
+  }
+}
+
+.footer__wrapper-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12px;
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.button {
+  border: none;
+  background: none;
+  color: #545454;
+}
+
+// Бьющиеся сердце
+
+.footer__icon-heart {
+  animation: beat 2s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.footer__icon-heart::before,
+.footer__icon-heart::after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  border-radius: 50% 50% 0 0;
+}
+
+.footer__wrapper-text::before {
+  top: -25px;
+}
+
+.footer__wrapper-text::after {
+  left: -25px;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(0.75);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(0.75);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes delay {
+  0% {
+    animation-delay: 0s;
+  }
+
+  100% {
+    animation-delay: 2s;
+  }
+}
+.footer__wrapper-text::before {
+  animation: delay infinite;
+}
+
+.footer__wrapper-text::after {
+  animation: delay infinite 1s;
+}
